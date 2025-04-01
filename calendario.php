@@ -47,37 +47,42 @@
     $(document).ready(function() {
         $("#demo-calendar-basic").zabuto_calendar({
             language: "pt",
-            events: [{
+            events: [
+                {
                     "date": "2025-04-01",
                     "badge": true,
                     "badgeClass": "bg-success",
-                    "markup": "<div class='badge rounded-pill bg-success'>[day]</div>"
+                    "markup": "<div class='badge rounded-pill bg-success'>[day]</div>",
+
                 },
                 {
                     "date": "2025-04-02",
                     "badge": true,
                     "badgeClass": "bg-success",
-                    "markup": "<div class='badge rounded-pill bg-success'>[day]</div>"
+                    "markup": "<a href='eventos.php?id=1'><div class='badge rounded-pill bg-success'>[day]</div></a>",
+ 
                 },
                 {
                     "date": "2025-04-03",
                     "badge": true,
                     "badgeClass": "bg-compromisso-agendado",
-                    "markup": "<div class='badge rounded-pill bg-compromisso-agendado'>[day]</div>"
+                    "markup": "<div class='badge rounded-pill bg-compromisso-agendado'>[day]</div>",
+                  
                 }
             ],
             action: function(event) {
-                var eventData = $("#" + this.id).data("event");
+                var eventData = $(this).data("event"); // Pega os dados do evento
                 if (eventData && eventData.url) {
-                    window.location.href = eventData.url;
+                    window.location.href = eventData.url; // Redireciona para a URL do evento
                 }
             },
             show_tooltip: true,
             tooltip_markup: function(date, event) {
-                return '<div class="tooltip-content">' + event.title + '</div>';
+                return '<div class="tooltip-content">' + (event.title || "Evento") + '</div>';
             }
         });
     });
 </script>
+
 
 </html>
