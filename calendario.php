@@ -22,7 +22,7 @@
 <body>
     <div class='header'></div>
     <div class="container">
-        <h4>Calendário</h4>
+        <h4>Calendários</h4>
         <div id="demo-calendar-basic"></div>
         <a href="./dashboard.php">Voltar</a>
     </div>
