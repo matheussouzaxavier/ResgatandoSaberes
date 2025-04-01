@@ -66,7 +66,7 @@
                     "date": "2025-04-03",
                     "badge": true,
                     "badgeClass": "bg-compromisso-agendado",
-                    "markup": "<div class='badge rounded-pill bg-compromisso-agendado'>[day]</div>",
+                    "markup": "<a href='eventos.php?id=3'><div class='badge rounded-pill bg-compromisso-agendado'>[day]</div></a>",
                   
                 }
             ],
